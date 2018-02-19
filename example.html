@@ -30,13 +30,13 @@ function initMap() {
 	});
 
 	// initialize a geeoHTTP client to get a token (dev feature only)
-	var geeoHttp = new geeo.GeeoHTTP("https://gmo.geeo.io")
+	var geeoHttp = new geeo.GeeoHTTP("https://gmo.geeo.io/ws")
 	// get token, give a name to our agent and our view
 	geeoHttp.getGuestToken("agent"+Date.now(), "view"+Date.now())
 	.then(function (token) {
 
 		// create a new WS connection to Geeo
-		var geeoWS = new geeo.GeeoWS("wss://gmo.geeo.io:443")
+		var geeoWS = new geeo.GeeoWS("wss://gmo.geeo.io:")
 
 		var markers = {}
 
