@@ -49,6 +49,17 @@ function initMap() {
 			})
 		});
 
+		map.addListener("mousedown",function(e){
+			if(e.Ga.button == 2){
+				for(key in geeoWS.view.pois){
+					geeoWS.removePOI(geeoWS.view.pois[key]);
+				}
+			}
+			//geeoWS.removePOI()
+		});
+
+		
+
 		// a new POI appears in view
 		geeoWS.view.on("poiEntered", function(poi) {
 			markers[poi.id] = new google.maps.Marker({
