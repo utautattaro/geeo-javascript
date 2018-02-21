@@ -53,7 +53,7 @@ function initMap() {
 		map.addListener("mousedown",function(e){
 			if(e.Ga.button == 2){
 				
-				var poi_array = GeeoWS.view.pois(); //error
+				var poi_array = geeoWS.view.pois(); //error
 				/*console shows "pois() is not function" API DOC : api.md/#View+pois   */
 
 				for(key in geeoWS.view.pois){
