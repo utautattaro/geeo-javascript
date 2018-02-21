@@ -232,7 +232,7 @@ var GeeoWS = exports.GeeoWS = function (_EventEmitter) {
 	}, {
 		key: "removePOI",
 		value: function removePOI(poi) {
-			this.ws.send(JSON.stringify({ removePOI: poi }));
+            this.ws.send(JSON.stringify({ removePOI: poi }));
 		}
 
 		/**
